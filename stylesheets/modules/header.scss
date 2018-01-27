@@ -1,0 +1,254 @@
+.header {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    margin-top: 30px;
+    position: relative;
+
+    &__logo {
+        display: inline-block;
+        color: white;
+        background-color: black;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px;
+        font-size: 35px;
+        font-family: "Raleway";
+        font-weight: bolder;
+    }
+
+    &__word {
+        display: inline-block;
+        font-family: "Raleway";
+        font-size: 25px;
+        line-height: 50px;
+        vertical-align: middle;
+    }
+
+    &__paragraph {
+        font-family: "Roboto Slab";
+        font-size: 25px;
+        width: 65%;
+        margin-top: 15px;
+    }
+
+    &__hamburger {
+        position: absolute;
+        right: 0;
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+
+        &__line {
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            margin-top: 3px;
+
+            &--first {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        height: 8px;
+        border: 1px solid grey;
+        position: relative;
+        top: 50px;
+        box-sizing: border-box;
+        overflow: hidden;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        border-right: 0px;
+        border-left: 0px;
+    }
+
+    &__list {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }    
+            
+    &__li {
+        font-family: "Roboto Slab";
+        font-size: 18px;
+        margin-right: 5%;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+
+        &--first {
+            margin-top: 45px;
+            opacity: 0;
+        }
+
+        &--second {
+            margin-top: 45px;
+            opacity: 0;
+        }
+
+        &--third {
+            margin-right: 0px;
+            margin-top: 45px;
+            opacity: 0;
+        }
+    }
+
+    &__a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    &__prevButton {
+        position: absolute;
+        top: 50%;
+        left: -6%;
+        height: 30px;
+        width: 38px;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+        cursor: pointer;
+        z-index: 10;
+        
+    }
+
+    &__nextButton {
+        position: absolute;
+        top: 50%;
+        right: -6%;
+        height: 30px;
+        width: 38px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    &__slider {
+        margin-top: 100px;
+        width: 100%;
+    }
+
+    &__slide {
+        position: relative;
+    }
+
+    &__btn {
+        height: 53px;
+        width: 250px;
+        background-color: transparent;
+        color: black;
+        font-family: "Roboto Slab";
+        font-size: 15px;
+        position: absolute;
+        left: 54%;
+        top: 70%;
+        transition: all .2s ease-in-out;
+        border: 1px solid black;
+        letter-spacing: 3px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: grey;
+            color: white;
+            border: 1px solid white;
+        }
+    }
+            
+    &__img {
+        width: 100%;
+    }
+}
+
+/* the slides */
+.slick-slide {
+    margin: 0 10px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header__btn {
+        height: 45px;
+        width: 169px;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    
+    .header__paragraph {
+        font-size: 13px;
+    }
+
+    .header__li {
+        font-size: 13px;
+    }
+
+    .header__hamburger {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header__nav {
+        top: 35px;
+    }
+
+    .header__slider {
+        top: -10px;
+    }
+
+    .header__nextButton {
+        height: 18px;
+        width: 24px;
+    }
+
+    .header__prevButton {
+        height: 18px;
+        width: 24px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header__nextButton, .header__prevButton {
+        display: none !important;
+    }
+
+    .header__btn {
+        height: 30px;
+        width: 93px;
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .header {
+        width: 90%;
+    }
+    .header__paragraph {
+        font-size: 11px;
+    }
+
+    .header__slider {
+        top: -30px;
+    }
+}
